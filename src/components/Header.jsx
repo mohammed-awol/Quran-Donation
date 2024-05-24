@@ -14,7 +14,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { useDispatch, useSelector } from 'react-redux';
 import { get_card_products, get_wishlist_products } from '../store/reducers/cardReducer';
 
-const Header = () => {
+const NurHeader = () => {
     
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -39,7 +39,7 @@ const Header = () => {
         if (userInfo) {
             navigate('/card')
         } else {
-            navigate('/login')
+            navigate('/Login')
         }
     } 
 
@@ -52,7 +52,7 @@ const Header = () => {
 
     return (
         <div className='w-full bg-white'>
-            <div className='header-top bg-[#caddff] md-lg:hidden'>
+            <div className='NurHeader-top bg-[#caddff] md-lg:hidden'>
                 <div className='w-[85%] lg:w-[90%] mx-auto'>
                     <div className='flex w-full justify-between items-center h-[50px] text-slate-500'>
                         <ul className='flex justify-start items-center gap-8 font-semibold text-black'>
@@ -88,7 +88,7 @@ const Header = () => {
             userInfo ? <Link className='flex cursor-pointer justify-center items-center gap-2 text-sm text-black' to='/dashboard'>
                 <span> <FaUser/> </span>
                 <span> {userInfo.name} </span>
-                 </Link> : <Link to='/login' className='flex cursor-pointer justify-center items-center gap-2 text-sm text-black'>
+                 </Link> : <Link to='/Login' className='flex cursor-pointer justify-center items-center gap-2 text-sm text-black'>
                 <span> <FaLock /> </span>
                 <span>Login </span>
                  </Link>
@@ -128,7 +128,7 @@ const Header = () => {
                             <Link to='/shops' className={`p-2 block ${pathname === '/shops' ?  'text-[#059473]' : 'text-slate-600' } `} >Shop</Link>
                         </li>
                         <li>
-                            <Link className={`p-2 block ${pathname === '/blog' ?  'text-[#059473]' : 'text-slate-600' } `} >Blog</Link>
+                            <Link className={`p-2 block ${pathname === '/Blogs' ?  'text-[#059473]' : 'text-slate-600' } `} >Blogs</Link>
                         </li>
                         <li>
                             <Link className={`p-2 block ${pathname === '/about' ?  'text-[#059473]' : 'text-slate-600' } `} >About Us</Link>
@@ -142,7 +142,7 @@ const Header = () => {
                 <div className='flex md-lg:hidden justify-center items-center gap-5'>
                     <div className='flex justify-center gap-5'>
        
-  <div onClick={() => navigate(userInfo ? '/dashboard/my-wishlist' : '/login') } className='relative flex justify-center items-center cursor-pointer w-[35px] h-[35px] rounded-full bg-[#e2e2e2]'>
+  <div onClick={() => navigate(userInfo ? '/dashboard/my-wishlist' : '/Login') } className='relative flex justify-center items-center cursor-pointer w-[35px] h-[35px] rounded-full bg-[#e2e2e2]'>
                             <span className='text-xl text-green-500'><FaHeart /></span>
 
             {
@@ -202,7 +202,7 @@ const Header = () => {
             userInfo ? <Link className='flex cursor-pointer justify-center items-center gap-2 text-sm text-black' to='/dashboard'>
                 <span> <FaUser/> </span>
                 <span>{ userInfo.name }</span>
-                 </Link> : <Link className='flex cursor-pointer justify-center items-center gap-2 text-sm text-black' to='/login'>
+                 </Link> : <Link className='flex cursor-pointer justify-center items-center gap-2 text-sm text-black' to='/Login'>
                 <span> <FaLock /> </span>
                 <span>Login </span>
                  </Link>
@@ -219,7 +219,7 @@ const Header = () => {
                             <Link to='/shops' className={`py-2 block ${pathname === '/shops' ?  'text-[#059473]' : 'text-slate-600' } `} >Shop</Link>
                         </li>
                         <li>
-                            <Link className={`py-2 block ${pathname === '/blog' ?  'text-[#059473]' : 'text-slate-600' } `} >Blog</Link>
+                            <Link className={`py-2 block ${pathname === '/Blogs' ?  'text-[#059473]' : 'text-slate-600' } `} >Blogs</Link>
                         </li>
                         <li>
                             <Link className={`py-2 block ${pathname === '/about' ?  'text-[#059473]' : 'text-slate-600' } `} >About Us</Link>
@@ -341,4 +341,5 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default NurHeader;
+ 

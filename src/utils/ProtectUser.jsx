@@ -7,7 +7,7 @@ const ProtectUser = () => {
     if (userInfo) {
         return <Outlet/>
     } else {
-        return <Navigate to='/login' replace={true} />
+        return <Navigate to='/Login' replace={true} />
     }
 
 };

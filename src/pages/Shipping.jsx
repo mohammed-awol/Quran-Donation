@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import NurHeader from '../components/NurHeader.jsx';
+import NurFooter from '../components/NurFooter';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { IoIosArrowForward } from "react-icons/io";
 import { useDispatch, useSelector } from 'react-redux';
@@ -55,7 +55,7 @@ const Shipping = () => {
 
     return (
         <div>
-          <Header/>
+          <NurHeader/>
           <section className='bg-[url("http://localhost:3000/images/banner/shop.png")] h-[220px] mt-6 bg-cover bg-no-repeat relative bg-left'>
             <div className='absolute left-0 top-0 w-full h-full bg-[#2422228a]'>
                 <div className='w-[85%] md:w-[80%] sm:w-[90%] lg:w-[90%] h-full mx-auto'>
@@ -237,7 +237,7 @@ const Shipping = () => {
         
    </section>       
 
-          <Footer/>
+          <NurFooter/>
         </div>
     );
 };

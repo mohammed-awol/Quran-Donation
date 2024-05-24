@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import NurHeader from '../components/NurHeader';
+import NurFooter from '../components/NurFooter';
 import { FaFacebookF } from "react-icons/fa6";
 import { FaGoogle } from "react-icons/fa6"; 
 import { Link,useNavigate } from 'react-router-dom';
@@ -59,7 +59,7 @@ const Register = () => {
 
 
 
-            <Header/>
+            <NurHeader/>
     <div className='bg-slate-200 mt-4'>
         <div className='w-full justify-center items-center p-10'>
             <div className='grid grid-cols-2 w-[60%] mx-auto bg-white rounded-md'>
@@ -105,10 +105,10 @@ const Register = () => {
     </div>    
 
     <div className='text-center text-slate-600 pt-1'>
-        <p>You Have No Account? <Link className='text-blue-500' to='/login'> Login</Link> </p>
+        <p>You Have No Account? <Link className='text-blue-500' to='/Login'> Login</Link> </p>
     </div> 
 
-    <a target='_blank' href="http://localhost:3001/login">
+    <a target='_blank' href="http://localhost:3001/Login">
      <div className='px-8 w-full py-2 bg-[#02e3e0] shadow hover:shadow-red-500/50 text-white rounded-md flex justify-center items-center gap-2 mb-3'>
             Login As a Seller
      </div>
@@ -124,14 +124,14 @@ const Register = () => {
             </div> 
 
         <div className='w-full h-full py-4 pr-4'>
-            <img src="http://localhost:3000/images/login.jpg" alt="" />
+            <img src="http://localhost:3000/images/Login.jpg" alt="" />
          </div>    
 
          </div>
         </div>
     </div>        
             
-            <Footer/>
+            <NurFooter/>
         </div>
     );
 };

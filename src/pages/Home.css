@@ -1,0 +1,84 @@
+/* HomePage.css */
+.home-page {
+    padding: 20px;
+}
+
+.image-slide {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.image-slide img {
+    width: 100%; /* Adjust this value to make the image wider */
+    max-width: 100%; /* Ensure it does not exceed the container's width */
+    height: auto;
+    max-height: 500px; /* Adjust this value as needed */
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    font-size: 30px;
+    font-weight: bold;
+
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center; /* Center the text within the overlay */
+}
+
+.company-description {
+    margin-top: 20px;
+}
+
+.company-description h2 {
+    margin-bottom: 10px;
+}
+
+.company-description p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Custom styles for slick carousel navigation */
+.slick-prev, .slick-next {
+    font-size: 0;
+    z-index: 1;
+    color: transparent; /* Customize arrow color */
+    background-color: rgba(255, 255, 255, 0.5); /* Add background color for better visibility */
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    color: #000; /* Change color on hover */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #333; /* Customize dot color */
+}
+
+.slick-dots li.slick-active button:before {
+    color: #000; /* Customize active dot color */
+}

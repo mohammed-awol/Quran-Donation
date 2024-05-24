@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import NurHeader from '../components/NurHeader.jsx';
+import NurFooter from '../components/NurFooter';
 import { FaList } from 'react-icons/fa';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { IoIosHome } from "react-icons/io";
@@ -27,7 +27,7 @@ const Dashboard = () => {
             localStorage.removeItem('customerToken')
             dispatch(user_reset())
             dispatch(reset_count())
-            navigate('/login')
+            navigate('/Login')
             
         } catch (error) {
             console.log(error.response.data)
@@ -36,7 +36,7 @@ const Dashboard = () => {
 
     return (
         <div>
-           <Header/>
+           <NurHeader/>
            <div className='bg-slate-200 mt-5'>
                 <div className='w-[90%] mx-auto md-lg:block hidden'>
                     <div>
@@ -95,7 +95,7 @@ const Dashboard = () => {
 
            </div>
 
-           <Footer/>
+           <NurFooter/>
         </div>
     );
 };

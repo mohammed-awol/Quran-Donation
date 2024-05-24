@@ -186,7 +186,7 @@ const Reviews = ({product}) => {
 
 
             </div> : <div>
-                <Link to='/login' className='py-1 px-5 bg-red-500 text-white rounded-sm'> Login First </Link>
+                <Link to='/Login' className='py-1 px-5 bg-red-500 text-white rounded-sm'> Login First </Link>
             </div>
         }
     </div>

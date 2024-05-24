@@ -22,7 +22,7 @@ const FeatureProducts = ({products}) => {
             productId : id
            }))
         } else {
-            navigate('/login')
+            navigate('/Login')
         }
     }
 
